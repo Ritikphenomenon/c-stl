@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    
+	pair<int,string>p;//declaration of pairs
+	p={2,"abc"};//assigining value to the pairs
+	pair<int,string>&p1=p;//for copying value of pairs
+	p1.first=3;//for changing the value of pairs
+	cout<<p.first<<" "<<p.second<<endl;//for printing the value of pairs
+	int a[]={1,2,3};
+	int b[]={2,3,4};
+	pair<int,int>p_array[3];//for declaration of the pairs,arrays
+	p_array[0]={1,2};//assiging value to index of the pairs ARRAY
+	p_array[1]={2,3};
+	p_array[2]={3,4};
+	swap(p_array[0],p_array[2]);//for swapping of the pairs.
+	for(int i=0;i<3;i++)
+{
+    cout<<p_array[i].first<<" "<<p_array[i].second<<endl;//for printing the outputs of pairs
+}
+
+
+
+
+pair<int,string>q1;
+cin>>q1.first;//normally we can also take the output.
+cout<<q1.first;
+	return 0;
+}
