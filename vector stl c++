@@ -1,0 +1,55 @@
+#include <bits/stdc++.h>
+using namespace std;
+void printvec(vector<int>v)//passing vector in function like array
+{
+    cout<<"size ="<<v.size()<<endl;//v.size() for calculating the size.
+    for(int i=0;i<v.size();i++)
+    {
+        cout<<v[i]<<" ";
+    }
+    cout<<endl;
+}
+int main() {
+  /*
+   vector<int>v;
+   int n;
+   cin>>n;
+   for(int i=0;i<n;i++)
+   {
+       int x;
+       cin>>x;
+       v.push_back(x);//o(1) time complexity here.
+   }
+ 
+   /*
+   vector<int>v(10);//it will creates of vector of size 10,with all values=0
+   vector<int>v1;
+   v1.push_back(7);//for inserting element into the vector.
+   v1.push_back(6);
+   printvec(v1);//like array only the name of the variables
+   v1.pop_back();//it removes the last element of vector.
+   /*
+   you can also copy the one vector into the other vector which we cant do in the array8
+   
+   v1.push_back(6);
+  // vector<int>v2=v1;//copying one vector into the another vector,complexity o(n).
+  /*
+  if you dont want to use the copy,try to make the copy vector by the use of references.
+  in which original vector pass and copy not generated .also it is not expensive to use
+  because its time complexity is less.
+  
+  vector<int>&v2=v1;
+   v2.push_back(5);
+   printvec(v1);//copying does not get affected in original array.
+   printvec(v2);
+   */
+   vector<string>v;
+   int n;
+   cin>>n;
+   for(int i=0;i<n;i++)
+   {
+       string s;
+       cin>>s;
+   }
+	return 0;
+}
