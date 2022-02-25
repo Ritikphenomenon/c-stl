@@ -1,0 +1,52 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+	// your code goes here
+	vector<int>v={2,3,5,6,7};
+	cout<<"for printing the vectors\n";
+	for(int i=0;i<v.size();++i)
+	{
+	    cout<<v[i]<<" ";
+	}
+	cout<<endl;
+	vector<int>::iterator it;
+	cout<<"for printing using the iterator (*it)\n";
+	for(it=v.begin();it!=v.end();it++)
+	{
+	    cout<<(*it)<<" ";
+	}
+	cout<<"\n";
+	cout<<"for range based loop in the vectors.\n";
+	for(int value :v)//but this takes the copy,so the changes made their not affect.
+	{
+	    value++;
+	}
+	for(int &value :v){//here the changes reflect, because value taken by references.
+	    value++;
+	}
+	for(int value :v)//but this takes the copy,so the changes made their not affect.
+	{
+	    cout<<value<<" ";
+	}
+	cout<<endl;
+	cout<<"using range based loops using in the pairs.\n";
+	vector<pair<int,int>>v_p={{1,2},{2,3}};
+	for(pair<int,int>&value:v_p)
+	{
+	    cout<<value.first<<" "<<value.second<<endl;
+	}
+	cout<<endl;
+	cout<<"using auto keyword \n";
+	/*
+	the auto keyword automatically detect the data types ,which to use and 
+	and pointed itself to where to begin,it generally make our code much 
+	shorters and easier for us to use.
+	*/
+	for(auto &value:v_p)
+	{
+	    cout<<value.first<<" "<<value.second<<endl;
+	}
+	cout<<"here the auto automatics detect tha it is the integrs types data.\n";
+	auto a=1.0;
+	cout<<a<<endl;
+}
