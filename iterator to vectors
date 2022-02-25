@@ -1,0 +1,20 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+	// your code goes here
+	vector<int>v={2,3,5,6,7};
+	for(int i=0;i<v.size();++i)
+	{
+	    cout<<v[i]<<" ";
+	}
+	cout<<endl;
+	vector<int>::iterator it=v.begin();//for assigning iterator to the containers.
+	cout<<(*(it))<<endl;//for printing usually the first iterators.
+	
+	//for printing the entire vectors
+	for(it=v.begin();it!=v.end();++it)
+	{
+	    cout<<(*it)<<endl;
+	}
+	return 0;
+}
