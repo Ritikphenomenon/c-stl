@@ -1,0 +1,33 @@
+#include<bits/stdc++.h>
+using namespace std;
+void print(unordered_map<int,string>&m)
+{
+    cout<<"size="<<m.size()<<endl;
+    for(auto &pr:m)
+    {
+        cout<<pr.first<<" "<<pr.second<<endl;
+    }
+}
+int main()
+{
+    /*
+  1.  inbuilt impletation:
+    it use hash table ,but normal map takes red black tree.
+    here it printed in random order.
+    2.  time complexity:
+    here o(1),both insertion and exsertion ,which make it more optimised.
+    because normal map complexity is o(log n).
+    
+    3. valid key datatypes is not allowed in unorderde map ,but it is allow in map
+    e.g=: unordered_map<pair<int,int>,string>m;
+    this is not allowed here,it will show error,but it is allowed in map.
+    */
+    
+    unordered_map<int,string>m;
+    m[1]="abcd";
+    m[5]="cdc";//o(1)
+    m[3]="acd";
+    m[6]="a";
+    m[5]="cde";
+    print(m);
+}
