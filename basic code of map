@@ -1,0 +1,45 @@
+#include <bits/stdc++.h>
+using namespace std;
+void print(map<int,string>&m)
+{
+    //printing using the auto keywords.
+    cout<<"size="<<m.size()<<endl;//this gives the current of size.
+    for(auto &pr:m)//this loop complexitiy is 0(nlog n)
+    {
+        cout<<pr.first<<" "<<pr.second<<endl;//printing also 0(log n).
+    }
+    //we can also print using the iterator
+    map<int,string>::iterator it;
+    for(it=m.begin();it!=m.end();++it)
+    {
+        cout<<it->first<<" "<<it->second<<endl;//or in place of it-> ,we can use (*it)
+    }
+    cout<<"for printing the m[6} or any other type\n, gives deafult value";
+    
+}
+/*
+int  string
+1     abc
+5     cde 
+in normal map value store in sorted order according to the key 
+e.g: map
+       1,5
+       implementation of map done using red black tree.
+       map is not in continuos nature.
+       use iterator it++,not it+1.
+       all the key of map is in unique in nature.
+       key is in sorted order.
+       insertion and exsertion time complexity is o(log n).
+       */
+int main()
+{
+    map<int,string>m;
+    m[1]="abc";//insertion time complexity is 0(lpg n).
+    m[5]="cdc";
+    m[3]="acd";
+    m.insert({4,"afg"});//it use for insertion
+    //or m.insert(make_pair(4,"afg"));
+    m[6];
+    print(m);
+}
+
