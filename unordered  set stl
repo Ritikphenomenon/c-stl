@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+using namespace std;
+void print(unordered_set<string>&s)
+{
+    for(auto value:s)
+    {
+        cout<<value<<endl;
+    }
+}
+int main()
+{
+    unordered_set<string>s;
+    /*
+    difference is that all have time complexity of o(1).
+    if some place ordering does not matter use ,unorderd set.
+    */
+    s.insert("abc");
+    s.insert("zsdf");
+    s.insert("bcd");
+    s.insert("abc");
+    print(s);
+    
+    return 0;
+}
