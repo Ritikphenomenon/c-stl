@@ -11,6 +11,9 @@ int main()
 {
     unordered_set<string>s;
     /*
+    here can't use complex one inside the unordered set.
+    like e.g: unorderd_set<set<int>>s;
+    /*
     difference is that all have time complexity of o(1).
     if some place ordering does not matter use ,unorderd set.
     */
