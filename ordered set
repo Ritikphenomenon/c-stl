@@ -1,0 +1,33 @@
+#include <bits/stdc++.h>
+using namespace std;
+void print(set<string>&s)
+{
+    for(auto value:s)
+    {
+        cout<<value<<endl;
+    }
+}
+/*
+set store unique value in sorted order.
+*/
+int main() {
+	// your code goes here
+   set<string>s;
+   s.insert("abc");//log(n).
+   s.insert("zsdf");
+   s.insert("bcd");
+   auto it=s.find("abc");
+   /*
+   always use this,when using above one.
+   if(it!=s.end())
+   ,otherwise it will segmentation faults.
+   */
+   if(it!=s.end())
+   {
+   cout<<*it<<endl;
+   }
+ //  s.erase(it);//we can also use s.erase with iterators.
+ s.erase("bcd");//we can also direct input as string there.
+   print(s);
+	return 0;
+}
