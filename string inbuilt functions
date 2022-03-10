@@ -1,0 +1,38 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+/*
+1. to find the length of the string of a functions.
+stringname.length();
+
+2. to check whethe it is empty or not
+stringname.empty();
+
+3. to clear the string that you have written
+stringname.clear();
+
+4. for concatenation of two string
+string1name.append(string2name)
+
+5.to print the element of any index of the string.
+stringname.at(index).
+
+6 retrieve a portion of string within the integrs range.
+string1.substr(int x,int y)
+
+7.function which can insert other string in given position of the string.
+string1name.insert(int x,string2name)
+
+8.to find the index of other string if it is present in original string.
+string1name.find(string2name)
+//majorly it will give the first index.
+
+9.to erase the particular portion  of the string.
+string1name.erase(int x,int y);
+
+*/
+{
+   string a="ritik",b="r",c="pandey";
+  cout<<a.erase(1,3);
+   
+}
