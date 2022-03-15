@@ -1,0 +1,36 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    unordered_map<string,int> menu;
+    //insert key value pair inside the hashtable in o(1)
+menu["maggi"]=15;
+menu["colddrink"]=20;
+menu["dosa"]=90;
+//update query
+menu["dosa"]=10+menu["dosa"];
+menu.erase("dosa");
+//search
+string item;
+cin>>item;
+if(menu.count(item)==0)
+{
+    cout<<item<<" is not available\n";
+}
+else
+{
+    cout<<item<<"is available ,and its cost is"<<menu[item]<<endl;
+}
+//we can iterate over all the key-value pair that are present
+for(pair<string,int>item:menu)
+{
+    cout<<item.first<<"-"<<item.second<<endl;
+}
+cout<<"\n";
+//iterating using the auto keywords
+for(auto x:menu)
+{
+    cout<<x.first<<"-"<<x.second<<"\n";
+}
+return 0;
+}
